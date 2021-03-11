@@ -1,25 +1,23 @@
 ﻿using System;
 
-namespace Practice4
+namespace TI_Practice4
 {
-    class Program
+    class Practice4
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Please write something.");
             String input = Console.ReadLine();
 
+            input = "qwer#$% %^&?><ty1^& 1ytr^& ewq";
+
+            Palindrome palindrome = new Palindrome();
+            Console.WriteLine(palindrome.ToAlphaNumeric(input)); ;
+
+
             if (input.Length > 1)
             {
-                String output = "";
-                char[] array = input.ToCharArray();
-
-                foreach (char element in array)
-                {
-                    output = element + output;
-                }
-
-                if (input == output)
+                if (input.Equals(palindrome.Invert1(input)))
                 {
                     Console.WriteLine("You have written a palindrome.");
                 }
@@ -32,6 +30,7 @@ namespace Practice4
             {
                 Console.WriteLine("You have written a palindrome.");
             }
+            Console.ReadKey();
         }
     }
 }
