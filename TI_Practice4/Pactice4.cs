@@ -9,15 +9,12 @@ namespace TI_Practice4
             Console.WriteLine("Please write something.");
             String input = Console.ReadLine();
 
-            input = "qwer#$% %^&?><ty1^& 1ytr^& ewq";
-
-            Palindrome palindrome = new Palindrome();
-            Console.WriteLine(palindrome.ToAlphaNumeric(input)); ;
-
+            Palindrome palindrome1 = new Palindrome();
+            Palindrome palindrome2 = new Palindrome();
 
             if (input.Length > 1)
             {
-                if (input.Equals(palindrome.Invert1(input)))
+                if (palindrome1.ToAlphaNumeric(input).Equals(palindrome2.GetInvertedString(input)))
                 {
                     Console.WriteLine("You have written a palindrome.");
                 }
